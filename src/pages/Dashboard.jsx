@@ -77,7 +77,7 @@ const Dashboard = () => {
         </div>
         <div className="text-end">
           <div className="badge bg-dark p-2 mb-1">Renders: {renderCount.current}</div>
-          <div className="text-muted" style={{ fontSize: '0.8rem' }}>Last Sync: {lastRefreshed || 'Never'}</div>
+          <div className="text-muted" style={{ fontSize: '0.8rem' }}>Last Refreshed: {lastRefreshed || 'Never'}</div>
         </div>
       </div>
 
@@ -107,7 +107,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-3">
           <button className="btn btn-primary btn-lg w-100 shadow-sm" onClick={fetchPatients} disabled={loading}>
-            {loading ? 'Refreshing...' : 'Refresh Database'}
+            {loading ? 'Refreshing...' : 'Refresh patients'}
           </button>
         </div>
       </div>
