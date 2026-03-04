@@ -76,3 +76,49 @@ body {
   background-color: var(--primary-blue);
   color: white;
 }
+/* Ensure the container doesn't feel cramped on mobile */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Responsive Font Sizes for Headers */
+@media (max-width: 576px) {
+  h1.h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Make search and sort stack beautifully */
+  .input-group-lg {
+    font-size: 1rem;
+  }
+  
+  /* Adjust the Floating Scroll Button size for touch targets */
+  .position-fixed.bottom-0.end-0 {
+    margin: 1.5rem !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  /* Full Profile Card adjustments */
+  .card-body.p-4 {
+    padding: 1.25rem !important;
+  }
+}
+
+/* Avatar scaling for smaller cards */
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  min-width: 40px; /* Prevents shrinking in flexbox */
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .avatar-circle {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.25rem;
+  }
+}

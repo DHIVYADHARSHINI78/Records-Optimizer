@@ -29,6 +29,7 @@ const Highlight = ({ text, highlight }) => {
 };
 
 const PatientCard = React.memo(({ patient, handleSelect, isSelected, searchTerm }) => {
+  console.log("Child Rendered");
   return (
     <div className={`card h-100 patient-card-custom ${isSelected ? 'ring-active' : ''}`}>
       <div className="card-body p-4">

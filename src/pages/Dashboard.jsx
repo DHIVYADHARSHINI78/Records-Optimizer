@@ -113,14 +113,17 @@ const Dashboard = () => {
       </div>
 
       {/* STATS STRIP */}
-      <div className="alert alert-info py-2 px-3 border-0 shadow-sm d-flex justify-content-between align-items-center">
-        <span className="fw-semibold text-info-emphasis">
-          Showing {currentItems.length} of {filteredAndSortedPatients.length} Records
-        </span>
-        {selectedPatient && <span className="badge bg-warning text-dark px-3 py-2">Selected: {selectedPatient.name}</span>}
-      </div>
-
-      {/* UPDATED SELECTED PATIENT PREVIEW (FULL PROFILE) */}
+ {/* STATS STRIP - Updated to show Total Count */}
+<div className="alert alert-info py-2 px-3 border-0 shadow-sm d-flex justify-content-between align-items-center">
+  <span className="fw-semibold text-info-emphasis">
+    📊 Total Records Found: {filteredAndSortedPatients.length} Patients
+  </span>
+  {selectedPatient && (
+    <span className="badge bg-warning text-dark px-3 py-2 animate__animated animate__pulse animate__infinite">
+      Active Selection: {selectedPatient.name}
+    </span>
+  )}
+</div>
     {/* UPDATED SELECTED PATIENT PREVIEW (FULL PROFILE) */}
 {selectedPatient && (
   <div className="card border-0 shadow-lg mb-5 bg-white border-start border-primary border-4 animate__animated animate__fadeInUp">
